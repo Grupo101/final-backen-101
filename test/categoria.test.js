@@ -32,7 +32,6 @@ describe('Categoria Endpoints', () => {
             .send({
                 nombre: 'categirua_test',
                 descripcion: 'lorem limpsus',
-                estado: 1,
             })
         expect(res.statusCode).toEqual(200)
     })

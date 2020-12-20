@@ -30,7 +30,7 @@ const models = require('../models');
 
 
 
-const checkToken = async (token) => {   ///validadcion del token si caduco  oalgo paso 
+async function checkToken (token) {   ///validadcion del token si caduco  oalgo paso 
     let localID = null;
     try {
         const {id} = await token.decode(token);
