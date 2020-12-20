@@ -3,7 +3,7 @@ const articuloController = require('../../controllers/ArticuloController.js');
 const auth = require('../../middlewares/auth')
 
 ///metodos de esta categoria
-router.get('/list', auth.verificarVendedor, articuloController.list); ///****** */
+router.get('/list',  articuloController.list); ///****** */
 router.post('/add', auth.verificarVendedor, articuloController.add);
 router.put('/update', auth.verificarVendedor, articuloController.update);
 router.put('/activate', auth.verificarVendedor, articuloController.activate);

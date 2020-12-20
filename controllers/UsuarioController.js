@@ -23,7 +23,8 @@ exports.login = async(req,res,next) =>{
 
             }
             else{
-                res.status(401).send({auth: false ,accessToken: null, reason:"Invalid Password!"});
+                res.status(401).send('Password Not Found.');
+                               //res.status(401).send({auth: false ,accessToken: null, reason:"Invalid Password!"});
                                 // res.status(401).json({
                 //     error:'Error en usuario o contraseña 401'
                 //})

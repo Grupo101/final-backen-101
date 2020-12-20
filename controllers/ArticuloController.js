@@ -1,4 +1,5 @@
 const db = require('../models');
+const Categoria = require('../models').Categoria;
 
 exports.list = async(req,res,next) =>{
     try {
