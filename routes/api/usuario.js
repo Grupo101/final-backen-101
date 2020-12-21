@@ -4,9 +4,13 @@ const usuarioController = require('../../controllers/UsuarioController.js');
 const auth = require('../../middlewares/auth')
 
 
+router.post('/add', auth.verificarVendedor, usuarioController.add);
 router.get('/list', auth.verificarVendedor, usuarioController.list); ///****** */
 router.post('/register', auth.verificarAdministrador, usuarioController.register);
-router.put('/update', auth.verificarAdministrador, usuarioController.update);
+router.put('/update', auth.verificarVendedor, usuarioController.update);
+router.put('/activate', auth.verificarVendedor, usuarioController.activate);
+router.put('/deactivate', auth.verificarVendedor, usuarioController.deactivate);
+
 
 router.post('/login', usuarioController.login);
 
